@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <title>JS</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <base target="_blank">
+</head>
+
+<body>
+    <h1>JavaScript</h1>
+
+    <h2>1. Способы внедрения JS</h2>
+
+    <h3>Inline</h3>
+    <button onclick="alert('Inline!')">Inline</button>
+    <div class="code">&lt;button onclick="alert('...')"&gt;</div>
+
+    <h3>Internal</h3>
+    <button onclick="internalDemo()">Internal</button>
+    <div id="out-internal" class="output"></div>
+    <div class="code">&lt;script&gt; function internalDemo() {...} &lt;/script&gt;</div>
+
+    <h3>External</h3>
+    <button onclick="externalDemo()">External</button>
+    <div id="out-external" class="output"></div>
+    <div class="code">&lt;script src="script.js"&gt;&lt;/script&gt;</div>
+
+    <h3>URL</h3>
+    <a href="javascript:alert('URL!')">URL</a>
+    <div class="code">&lt;a href="javascript:alert('...')"&gt;</div>
+
+    <h2>2. Операторы</h2>
+
+    <h3>if</h3>
+    <button onclick="demoIf()">if</button>
+    <div id="out-if" class="output"></div>
+
+    <h3>switch</h3>
+    <button onclick="demoSwitch()">switch</button>
+    <div id="out-switch" class="output"></div>
+
+    <h3>for</h3>
+    <button onclick="demoFor()">for</button>
+    <div id="out-for" class="output"></div>
+
+    <h3>while</h3>
+    <button onclick="demoWhile()">while</button>
+    <div id="out-while" class="output"></div>
+
+    <h3>do...while</h3>
+    <button onclick="demoDoWhile()">do...while</button>
+    <div id="out-dowhile" class="output"></div>
+
+    <h3>break</h3>
+    <button onclick="demoBreak()">break</button>
+    <div id="out-break" class="output"></div>
+
+    <h3>continue</h3>
+    <button onclick="demoContinue()">continue</button>
+    <div id="out-continue" class="output"></div>
+
+    <h3>return</h3>
+    <button onclick="demoReturn()">return</button>
+    <div id="out-return" class="output"></div>
+
+    <h2>3. Диалоговые окна</h2>
+
+    <h3>alert()</h3>
+    <button onclick="alert('alert()')">alert()</button>
+    <div class="code">alert("...");</div>
+
+    <h3>confirm()</h3>
+    <button onclick="demoConfirm()">confirm()</button>
+    <div id="out-confirm" class="output"></div>
+    <div class="code">var r = confirm("..."); if (r == true) {...}</div>
+
+    <h3>prompt()</h3>
+    <button onclick="demoPrompt()">prompt()</button>
+    <div id="out-prompt" class="output"></div>
+    <div class="code">var name = prompt("...", "...");</div>
+
+</body>
+
+</html>
