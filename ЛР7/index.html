@@ -16,7 +16,12 @@
                 <img src="content/icons/destruction.png" alt="Logo" class="header-logo">
                 <span>Wiki</span>
             </div>
-            <nav class="main-nav">
+            <button class="burger-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" id="main-nav">
                 <ul>
                     <li><a href="#">Главная</a></li>
                     <li><a href="#">История</a></li>
@@ -90,6 +95,26 @@
             <p>Рудый Данила, ПЗТ-43</p>
         </footer>
     </div>
+
+    <script>
+        const burgerBtn = document.querySelector('.burger-btn');
+        const mainNav = document.getElementById('main-nav');
+
+        burgerBtn.addEventListener('click', () => {
+            const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+            burgerBtn.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('nav-open');
+            burgerBtn.classList.toggle('burger-active');
+        });
+
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerBtn.setAttribute('aria-expanded', 'false');
+                mainNav.classList.remove('nav-open');
+                burgerBtn.classList.remove('burger-active');
+            });
+        });
+    </script>
 </body>
 
 </html>

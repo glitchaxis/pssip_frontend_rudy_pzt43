@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма заказа</title>
+    <link rel="stylesheet" href="style1.css">
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Форма заказа</h1>
+
+        <form class="form" action="#" method="post">
+            <!-- Organization name -->
+            <div class="form-group">
+                <label class="label" for="org">Название организации</label>
+                <input class="input" type="text" id="org" name="organization">
+            </div>
+
+            <!-- OGRN/INN -->
+            <div class="form-group">
+                <label class="label" for="ogrn">ОГРН/ИНН</label>
+                <input class="input" type="text" id="ogrn" name="ogrn_inn">
+            </div>
+
+            <!-- Stamp diameter -->
+            <div class="form-group">
+                <label class="label required" for="diameter">Диаметр печати/размер штампа</label>
+                <input class="input" type="text" id="diameter" name="diameter" required>
+            </div>
+
+            <!-- Stamp type -->
+            <div class="form-group">
+                <label class="label required" for="type">Тип оснастки</label>
+                <select class="select" id="type" name="stamp_type" required>
+                    <option value="manual">Ручная</option>
+                    <option value="auto">Автоматическая</option>
+                </select>
+            </div>
+
+            <!-- Quantity -->
+            <div class="form-group">
+                <label class="label" for="quantity">Количество</label>
+                <input class="input" type="number" id="quantity" name="quantity" min="1">
+            </div>
+
+            <!-- Production time -->
+            <div class="form-group">
+                <label class="label required" for="time">Срок изготовления</label>
+                <select class="select" id="time" name="production_time" required>
+                    <option value="urgent">Срочно</option>
+                    <option value="standard">Стандарт</option>
+                </select>
+            </div>
+
+            <!-- File upload -->
+            <div class="form-group">
+                <label class="label" for="file">Загрузка файла</label>
+                <p class="hint">Файл графического формата и формата MS Word, не более 10Мб</p>
+                <div class="file-wrapper">
+                    <input class="input file-input" type="text" id="file" name="file_name" readonly placeholder="">
+                    <button class="btn-file" type="button">Обзор...</button>
+                </div>
+            </div>
+
+            <!-- Contact person -->
+            <div class="form-group">
+                <label class="label" for="contact">Контактное лицо</label>
+                <input class="input" type="text" id="contact" name="contact_person">
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label class="label required" for="phone">Контактный телефон</label>
+                <input class="input" type="tel" id="phone" name="phone" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label class="label required" for="email">Контактный e-mail</label>
+                <input class="input" type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Comments -->
+            <div class="form-group">
+                <label class="label" for="comments">Ваши комментарии</label>
+                <textarea class="textarea" id="comments" name="comments" rows="6"></textarea>
+            </div>
+
+            <!-- Required fields note -->
+            <p class="required-note">
+                <span class="star">*</span> Поля обязательные для заполнения
+            </p>
+
+            <!-- Submit button -->
+            <button class="btn-submit" type="submit">Отправить</button>
+        </form>
+    </div>
+</body>
+</html>
