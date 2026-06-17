@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Вариант 30</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function showDate() {
+            var now = new Date();
+            var seconds = String(now.getSeconds()).padStart(2, '0');
+            var hours = String(now.getHours()).padStart(2, '0');
+            alert(seconds + '-' + hours);
+        }
+        function showYear() {
+            alert(new Date().getFullYear());
+        }
+    </script>
+<base target="_blank">
+</head>
+<body>
+    <h1>Вариант 30</h1>
+
+    <div class="task">
+        <h2>1. Date</h2>
+        <button onclick="showDate()">Показать секунды-часы</button>
+        <button onclick="showYear()">Показать год</button>
+    </div>
+
+    <div class="task">
+        <h2>2. Цикл for</h2>
+        <div id="task2"></div>
+    </div>
+
+    <div class="task">
+        <h2>3. Array</h2>
+        <div id="task3"></div>
+    </div>
+
+    <div class="task">
+        <h2>4. Math</h2>
+        <label>a: <input type="number" id="a" value="5"></label>
+        <label>b: <input type="number" id="b" value="3"></label>
+        <label>c: <input type="number" id="c" value="2"></label>
+        <button onclick="calc()">Рассчитать</button>
+        <div id="task4"></div>
+    </div>
+
+    <div class="task">
+        <h2>5. String</h2>
+        <div id="task5"></div>
+    </div>
+
+    <div class="task">
+        <h2>6. Браузер</h2>
+        <button onclick="startInfo()">Запустить</button>
+        <button onclick="stopInfo()">Остановить</button>
+        <div id="task6"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
