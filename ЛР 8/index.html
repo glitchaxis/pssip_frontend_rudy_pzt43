@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wiki</title>
+    <link rel="stylesheet" href="style.css">
+    <base target="_blank">
+<base target="_blank">
+</head>
+<body>
+    <div class="wiki-container">
+        <header class="main-header">
+            <div class="logo">
+                <img src="content/icons/destruction.png" alt="Logo" class="header-logo">
+                <span>Wiki</span>
+            </div>
+            <button class="burger-btn" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    <li><a href="#">Главная</a></li>
+                    <li><a href="#">История</a></li>
+                    <li><a href="#">Способности</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main class="wiki-main">
+            <h2>Обзор Эванессы</h2>
+            <p>Анонсированный 5-звёздочный персонаж в игре Honkai: Star Rail. Девушка, живущая рядом с Древом усмирения,
+                ярая поклонница комикса «Пушистый скиталец».</p>
+
+            <h2>Способности</h2>
+            <section class="skills-grid">
+                <div class="skill-card">
+                    <p>Базовая атака наносит одному врагу Физический урон.</p>
+                    <div class="showcase-images"><img src="content/skill-showcase/basic.png" alt="Базовая атака"></div>
+                </div>
+                <div class="skill-card">
+                    <p>Базовая атака наносит одному врагу Физический урон.</p>
+                    <div class="showcase-images"><img src="content/skill-showcase/basic.png" alt="Базовая атака"></div>
+                </div>
+                <div class="skill-card">
+                    <p>Навык наносит Физический урон одному врагу и его соседними целям, а также добавляет количество
+                        уровней Юмора.</p>
+                    <div class="showcase-images"><img src="content/skill-showcase/skill.png" alt="Навык"></div>
+                </div>
+                <div class="skill-card">
+                    <p>Навык Радости наносит всем врагам Физический урон и даёт Эванессе дополнительно стаки Настоящего
+                        хита.</p>
+                    <div class="showcase-images"><img src="content/skill-showcase/elationskill.png" alt="Навык Радости"></div>
+                </div>
+                <div class="skill-card">
+                    <p>Сверхспособность наносит Физический урон всем врагам.</p>
+                    <div class="showcase-images"><img src="content/skill-showcase/ultimate.png" alt="Сверхспособность"></div>
+                </div>
+                <div class="skill-card">
+                    <p>Талант — это особая атака Эванессы, которую выполняет её лис, а также её дорогая
+                        сверхспособность. При получении статуса Настоящий хит её энергия частично восстанавливается, и
+                        наоборот — получение энергии даёт ей статус Настоящий хит.</p>
+                    <div class="showcase-images"><img src="content/skill-showcase/talent.png" alt="Талант"></div>
+                </div>
+                <div class="skill-card">
+                    <p>Техника атакует всех ближайших врагов и наносит им Физический урон. </p>
+                    <div class="showcase-images"><img src="content/skill-showcase/technique.png" alt="Техника"></div>
+                </div>
+            </section>
+
+            <h2>Форма заказа</h2>
+            <div class="form-wrapper">
+                <form class="form" action="#" method="post">
+                    <div class="form-group">
+                        <label class="label" for="org">Название организации</label>
+                        <input class="input" type="text" id="org" name="organization">
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="ogrn">ОГРН/ИНН</label>
+                        <input class="input" type="text" id="ogrn" name="ogrn_inn">
+                    </div>
+                    <div class="form-group">
+                        <label class="label required" for="diameter">Диаметр печати/размер штампа</label>
+                        <input class="input" type="text" id="diameter" name="diameter" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label required" for="type">Тип оснастки</label>
+                        <select class="select" id="type" name="stamp_type" required>
+                            <option value="manual">Ручная</option>
+                            <option value="auto">Автоматическая</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="quantity">Количество</label>
+                        <input class="input" type="number" id="quantity" name="quantity" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label class="label required" for="time">Срок изготовления</label>
+                        <select class="select" id="time" name="production_time" required>
+                            <option value="urgent">Срочно</option>
+                            <option value="standard">Стандарт</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="file">Загрузка файла</label>
+                        <p class="hint">Файл графического формата и формата MS Word, не более 10Мб</p>
+                        <div class="file-wrapper">
+                            <input class="input file-input" type="text" id="file" name="file_name" readonly placeholder="">
+                            <button class="btn-file" type="button">Обзор...</button>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="contact">Контактное лицо</label>
+                        <input class="input" type="text" id="contact" name="contact_person">
+                    </div>
+                    <div class="form-group">
+                        <label class="label required" for="phone">Контактный телефон</label>
+                        <input class="input" type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label required" for="email">Контактный e-mail</label>
+                        <input class="input" type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="label" for="comments">Ваши комментарии</label>
+                        <textarea class="textarea" id="comments" name="comments" rows="6"></textarea>
+                    </div>
+                    <p class="required-note">
+                        <span class="star">*</span> Поля обязательные для заполнения
+                    </p>
+                    <button class="btn-submit" type="submit">Отправить</button>
+                </form>
+            </div>
+
+            <h2>Товар</h2>
+            <div class="microgrid">
+                <div class="product">
+                    <div class="product-image">
+                        <img src="dress.jpg" alt="Платье Versace" class="image">
+                    </div>
+                    <div class="product-info">
+                        <div class="header">
+                            <h3 class="title">ПЛАТЬЕ VERSACE</h3>
+                            <div class="rating">
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star">★</span>
+                                <span class="star empty">★</span>
+                            </div>
+                        </div>
+                        <p class="description">
+                            Современное платье Версаче разработано для элегантных и уверенных в себе дам. Вечерние наряды от этого бренда выбирают стильные и утонченные девушки.
+                        </p>
+                        <div class="size-row">
+                            <span class="size-label">Размер</span>
+                            <div class="size-num">42</div>
+                        </div>
+                        <div class="size-row">
+                            <span class="size-label">Размер</span>
+                            <div class="size-letters">
+                                <button class="size-btn active" type="button">S</button>
+                                <button class="size-btn" type="button">M</button>
+                                <button class="size-btn" type="button">L</button>
+                                <button class="size-btn" type="button">XL</button>
+                            </div>
+                        </div>
+                        <div class="quantity-row">
+                            <span class="quantity-label">Кол-во</span>
+                            <div class="quantity-control">
+                                <button class="qty-btn" type="button">−</button>
+                                <span class="qty-value">1</span>
+                                <button class="qty-btn" type="button">+</button>
+                            </div>
+                        </div>
+                        <div class="price">42 900 руб.</div>
+                        <div class="actions">
+                            <button class="btn-cart" type="button">В КОРЗИНУ</button>
+                            <button class="btn-icon" type="button" aria-label="В избранное">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                                </svg>
+                            </button>
+                            <button class="btn-icon" type="button" aria-label="Сравнить">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 6v6l4 2"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <aside class="wiki-infobox">
+            <div class="infobox-title">"Эванесса"</div>
+            <div class="infobox-image">
+                <img src="content/evanescia.png" alt="Эванесса">
+            </div>
+            <table class="infobox-table">
+                <tr>
+                    <th>Тип:</th>
+                    <td><img src="content/icons/destruction.png" alt="Разрушение" class="type-icon"></td>
+                </tr>
+                <tr>
+                    <th>Путь:</th>
+                    <td><img src="content/icons/elation.jpg" alt="Радость" class="type-icon"></td>
+                </tr>
+            </table>
+            <p style="text-align: center;">Световой конус:</p>
+            <img src="content/lightcone.png" alt="Конус Эванессы" class="lightcone">
+        </aside>
+
+        <footer class="main-footer">
+            <p>Рудый Данила, ПЗТ-43</p>
+        </footer>
+    </div>
+
+    <script>
+        const burgerBtn = document.querySelector('.burger-btn');
+        const mainNav = document.getElementById('main-nav');
+
+        burgerBtn.addEventListener('click', () => {
+            const isExpanded = burgerBtn.getAttribute('aria-expanded') === 'true';
+            burgerBtn.setAttribute('aria-expanded', !isExpanded);
+            mainNav.classList.toggle('nav-open');
+            burgerBtn.classList.toggle('burger-active');
+        });
+
+        document.querySelectorAll('.main-nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                burgerBtn.setAttribute('aria-expanded', 'false');
+                mainNav.classList.remove('nav-open');
+                burgerBtn.classList.remove('burger-active');
+            });
+        });
+    </script>
+</body>
+</html>
